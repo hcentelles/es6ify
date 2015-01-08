@@ -33,7 +33,7 @@ function compileFile(file, src) {
 }
 
 function es6ify(filePattern) {
-  filePattern =  filePattern || /\.js$/;
+  filePattern =  filePattern || /^(?!.*node_modules)+.+\.js$/;
 
   return function (file) {
 
